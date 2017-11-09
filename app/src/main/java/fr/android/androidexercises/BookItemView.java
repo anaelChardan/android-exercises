@@ -2,9 +2,14 @@ package fr.android.androidexercises;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
-public class BookItemView extends LinearLayout {
+public class BookItemView extends LinearLayout implements ItemView<Book>  {
+
+    private TextView name;
+    private TextView price;
 
     public BookItemView(Context context) {
         this(context, null);
@@ -21,10 +26,15 @@ public class BookItemView extends LinearLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        // TODO findViewById()
+        name = findViewById(R.id.nameTextView);
+        price = findViewById(R.id.priceTextView);
     }
 
-    public void bindView(Book book) {
-        // TODO setText()
+    @Override
+    public View bind(Book book) {
+        name.setText(book.name);
+        price.setText(String.valueOf(book.price));
+
+        return this;
     }
 }
