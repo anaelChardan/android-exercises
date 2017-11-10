@@ -32,5 +32,4 @@ public class JUnitLoginActivityTest {
         Assertions.assertThat(activity.loginLayout).isGone();
         Assertions.assertThat(activity.loggedText).isVisible();
     }
-
 }

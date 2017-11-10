@@ -22,6 +22,11 @@ public class LoginActivityTest {
 
     @Test
     public void shouldTryLoginAndSuccess() throws Exception {
-        // TODO test login
+        Espresso.onView(ViewMatchers.withId(R.id.usernameEdit)).perform(ViewActions.typeText("nanou"));
+        Espresso.onView(ViewMatchers.withId(R.id.passwordEdit)).perform(ViewActions.typeText("lefifou"));
+
+        Espresso.closeSoftKeyboard();
+        Espresso.onView(ViewMatchers.withId(R.id.loginButton)).perform(ViewActions.click());
+        Espresso.onView(ViewMatchers.withId(R.id.loggedText)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
     }
 }
