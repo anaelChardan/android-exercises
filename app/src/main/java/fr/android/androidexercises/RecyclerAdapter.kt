@@ -6,18 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class RecyclerAdapter(private val inflater: LayoutInflater, private val collection: List<Book>, private val resource: Int) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+class RecyclerAdapter<T>(private val inflater: LayoutInflater, private val collection: List<T>, private val resource: Int) : RecyclerView.Adapter<RecyclerAdapter<T>.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        (holder!!.itemView as BookItemView).bind(this.collection[position])    }
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(inflater.inflate(this.resource, parent, false))
+        (holder?.itemView as ItemView<T>).bind(this.collection[position])
     }
 
-    override fun getItemCount(): Int {
-        return collection.size
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder =
+            ViewHolder(inflater.inflate(this.resource, parent, false))
+
+
+    override fun getItemCount(): Int = collection.size
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }

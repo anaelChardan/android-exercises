@@ -4,24 +4,16 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
-import android.widget.TextView
 import kotlinx.android.synthetic.main.custom_view_item_book.view.*
 
+class BookItemView: LinearLayout, ItemView<Book> {
+    constructor(context: Context?): super(context)
+    constructor(context: Context?, attrs: AttributeSet?): super(context, attrs)
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int): super(context, attrs, defStyleAttr)
 
-class BookItemView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout(context, attrs, defStyleAttr) {
-
-    private var name: TextView? = null
-    private var price: TextView? = null
-
-    override fun onFinishInflate() {
-        super.onFinishInflate()
-        name = nameTextView
-        price = priceTextView
-    }
-
-    fun bind(book: Book): View {
-        name!!.text = book.name
-        price!!.text = book.price.toString()
+    override fun bind(t: Book): View {
+        nameTextView.text = t.name
+        priceTextView.text = t.price.toString()
 
         return this
     }
