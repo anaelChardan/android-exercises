@@ -1,7 +1,7 @@
 # Android Project
 
 This project tries to follow the Hexagonal architecture but even
-if the project is a little bit simple for that.
+if the project is a little bit simple for that it was interesting.
 
 Morevoer the supportingboundedcontext is only a technical layer that provides everything necessary
 to build an app with a list and a detailed view. This layer is totally abstracted from the Book domain
