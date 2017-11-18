@@ -1,4 +1,4 @@
-package fr.android.achardan.book.domain.processor
+package fr.android.achardan.book.domain.model
 
 import android.os.Parcelable
 import fr.android.achardan.book.domain.model.Book

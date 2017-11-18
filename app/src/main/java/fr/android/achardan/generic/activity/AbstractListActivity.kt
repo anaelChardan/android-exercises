@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import fr.android.achardan.book.infrastructure.processor.RetrofitItemProcessor
+import fr.android.achardan.book.infrastructure.persistence.api.RetrofitItemProcessor
 import fr.android.achardan.generic.fragment.DetailFragment
 import fr.android.achardan.generic.fragment.ListFragment
 import fr.android.achardan.generic.processor.ItemProcessor

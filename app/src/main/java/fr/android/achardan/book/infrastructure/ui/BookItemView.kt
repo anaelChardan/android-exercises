@@ -1,4 +1,4 @@
-package fr.android.achardan.book.infrastructure.view
+package fr.android.achardan.book.infrastructure.ui
 
 import android.content.Context
 import android.util.AttributeSet

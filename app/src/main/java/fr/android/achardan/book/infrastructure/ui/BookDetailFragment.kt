@@ -1,4 +1,4 @@
-package fr.android.achardan.book.infrastructure.fragment
+package fr.android.achardan.book.infrastructure.ui
 
 import android.os.Bundle
 import com.bumptech.glide.Glide

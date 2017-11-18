@@ -1,9 +1,8 @@
-package fr.android.achardan.book.infrastructure.activity
+package fr.android.achardan.book.infrastructure.ui
 
 import fr.android.achardan.R
 import fr.android.achardan.book.domain.model.Book
-import fr.android.achardan.book.infrastructure.fragment.BookDetailFragment
-import fr.android.achardan.book.infrastructure.processor.RetrofitItemProcessor
+import fr.android.achardan.book.infrastructure.persistence.api.RetrofitItemProcessor
 import fr.android.achardan.generic.activity.AbstractListActivity
 import fr.android.achardan.generic.fragment.DetailFragment
 import fr.android.achardan.generic.activity.ListActivity

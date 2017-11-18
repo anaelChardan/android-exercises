@@ -1,4 +1,4 @@
-package fr.android.achardan.book.infrastructure.processor
+package fr.android.achardan.book.infrastructure.persistence.api
 
 import fr.android.achardan.book.domain.model.Book
 import retrofit2.Call
