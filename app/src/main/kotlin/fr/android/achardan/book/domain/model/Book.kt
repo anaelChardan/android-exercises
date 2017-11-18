@@ -22,9 +22,7 @@ data class Book(var isbn: String? = null, var title: String? = null, var price: 
         parcel.writeStringArray(synopsis)
     }
 
-    override fun describeContents(): Int {
-        return 0
-    }
+    override fun describeContents(): Int = 0
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -51,12 +49,7 @@ data class Book(var isbn: String? = null, var title: String? = null, var price: 
     }
 
     companion object CREATOR : Parcelable.Creator<Book> {
-        override fun createFromParcel(parcel: Parcel): Book {
-            return Book(parcel)
-        }
-
-        override fun newArray(size: Int): Array<Book?> {
-            return arrayOfNulls(size)
-        }
+        override fun createFromParcel(parcel: Parcel): Book = Book(parcel)
+        override fun newArray(size: Int): Array<Book?> = arrayOfNulls(size)
     }
 }
