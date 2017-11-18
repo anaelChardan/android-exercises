@@ -5,11 +5,14 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import fr.android.achardan.book.infrastructure.persistence.api.RetrofitItemProcessor
+import fr.android.achardan.book.infrastructure.persistence.api.retrofit.RetrofitItemProcessor
+import fr.android.achardan.supportingboundedcontext.persistence.ItemProcessor
 import fr.android.achardan.supportingboundedcontext.ui.DetailFragment
 import fr.android.achardan.supportingboundedcontext.ui.ListFragment
-import fr.android.achardan.supportingboundedcontext.persistence.ItemProcessor
 
+/**
+ * Abstract helper to build a list activity
+ */
 abstract class AbstractListActivity<T : Parcelable> : AppCompatActivity(), ListActivity<T> {
     protected var selectedItem: T? = null
 
@@ -53,7 +56,10 @@ abstract class AbstractListActivity<T : Parcelable> : AppCompatActivity(), ListA
             supportFragmentManager
                     .beginTransaction()
                     .replace(
-                            containerLayoutFrameId(), instantiateDetailFragment() as Fragment, detailFragmentName())
+                            containerLayoutFrameId(),
+                            instantiateDetailFragment() as Fragment,
+                            detailFragmentName()
+                    )
                     .addToBackStack("fromList")
                     .commit()
 
@@ -62,7 +68,11 @@ abstract class AbstractListActivity<T : Parcelable> : AppCompatActivity(), ListA
 
         supportFragmentManager
                 .beginTransaction()
-                .replace(detailLayoutFrameId(), instantiateDetailFragment() as Fragment, detailFragmentName())
+                .replace(
+                        detailLayoutFrameId(),
+                        instantiateDetailFragment() as Fragment,
+                        detailFragmentName()
+                )
                 .commit()
     }
 }

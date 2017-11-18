@@ -7,8 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-
-abstract class AbstractDetailedFragment<T: Parcelable>: DetailFragment, Fragment() {
+abstract class AbstractDetailedFragment<T : Parcelable> : DetailFragment, Fragment() {
     protected var currentItem: T? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {

@@ -7,16 +7,20 @@ import fr.android.achardan.supportingboundedcontext.ui.AbstractDetailedFragment
 import fr.android.achardan.supportingboundedcontext.ui.DetailFragment
 import kotlinx.android.synthetic.main.book_view_full.*
 
-class BookDetailFragment: DetailFragment, AbstractDetailedFragment<Book>() {
+/**
+ * Detail fragment for book
+ */
+class BookDetailFragment : DetailFragment, AbstractDetailedFragment<Book>() {
     override fun bindObjectToView() {
         this.currentItem?.let {
-            details_titleTextView?.text = it.title
-            details_priceTextView?.text = it.price
-            details_isbnTextView?.text = it.isbn
+            full_Detail?.text = it.title
+            full_Price?.text = it.price
+            full_Isbn?.text = it.isbn
+            full_Synopsis?.text = it.synopsis?.joinToString(" ")
             Glide
                     .with(this)
                     .load(it.cover)
-                    .into(details_coverImageView)
+                    .into(full_Cover)
         }
     }
 

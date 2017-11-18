@@ -10,8 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import fr.android.achardan.supportingboundedcontext.ui.handler.ItemListener
 import fr.android.achardan.supportingboundedcontext.persistence.ItemProcessor
+import fr.android.achardan.supportingboundedcontext.ui.handler.ItemListener
 
 class ListFragment<T : Parcelable> : Fragment() {
     private var items: ArrayList<T> = ArrayList()
@@ -51,8 +51,8 @@ class ListFragment<T : Parcelable> : Fragment() {
         }
 
         itemProcessor.process(
-            {refresh(it)},
-            {Toast.makeText(view.context, "Items are not reachable", Toast.LENGTH_LONG).show()}
+                { refresh(it) },
+                { Toast.makeText(view.context, "Items are not reachable", Toast.LENGTH_LONG).show() }
         )
     }
 
@@ -74,7 +74,7 @@ class ListFragment<T : Parcelable> : Fragment() {
         val ITEMS_KEY = "ITEMS_KEY"
         val ITEM_PROCESSOR_KEY = "ITEM_PROCESSOR"
 
-        fun <T: Parcelable> create(
+        fun <T : Parcelable> create(
                 layoutListId: Int,
                 recycledViewId: Int,
                 itemViewId: Int,
@@ -93,5 +93,4 @@ class ListFragment<T : Parcelable> : Fragment() {
             return listFragment
         }
     }
-
 }
