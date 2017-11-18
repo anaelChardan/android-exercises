@@ -1,4 +1,4 @@
-package fr.android.achardan.generic.processor
+package fr.android.achardan.supportingboundedcontext.persistence
 
 import android.os.Parcelable
 

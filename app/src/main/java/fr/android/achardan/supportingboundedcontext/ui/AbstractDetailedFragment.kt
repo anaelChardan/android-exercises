@@ -1,4 +1,4 @@
-package fr.android.achardan.generic.fragment
+package fr.android.achardan.supportingboundedcontext.ui
 
 import android.os.Bundle
 import android.os.Parcelable

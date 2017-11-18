@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 import fr.android.achardan.book.domain.model.Book
 import fr.android.achardan.book.domain.model.BookProcessor
-import fr.android.achardan.generic.processor.ItemProcessor
+import fr.android.achardan.supportingboundedcontext.persistence.ItemProcessor
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

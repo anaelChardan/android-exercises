@@ -3,8 +3,8 @@ package fr.android.achardan.book.infrastructure.ui
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import fr.android.achardan.book.domain.model.Book
-import fr.android.achardan.generic.fragment.AbstractDetailedFragment
-import fr.android.achardan.generic.fragment.DetailFragment
+import fr.android.achardan.supportingboundedcontext.ui.AbstractDetailedFragment
+import fr.android.achardan.supportingboundedcontext.ui.DetailFragment
 import kotlinx.android.synthetic.main.book_view_full.*
 
 class BookDetailFragment: DetailFragment, AbstractDetailedFragment<Book>() {

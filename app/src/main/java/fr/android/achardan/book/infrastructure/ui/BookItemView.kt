@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.LinearLayout
 import com.bumptech.glide.Glide
 import fr.android.achardan.book.domain.model.Book
-import fr.android.achardan.generic.ItemView
+import fr.android.achardan.supportingboundedcontext.ui.ItemView
 import kotlinx.android.synthetic.main.book_view_list.view.*
 
 

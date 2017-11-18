@@ -1,4 +1,4 @@
-package fr.android.achardan.generic.fragment
+package fr.android.achardan.supportingboundedcontext.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -10,9 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import fr.android.achardan.generic.ItemListener
-import fr.android.achardan.generic.processor.ItemProcessor
-import fr.android.achardan.generic.RecyclerAdapter
+import fr.android.achardan.supportingboundedcontext.ui.handler.ItemListener
+import fr.android.achardan.supportingboundedcontext.persistence.ItemProcessor
 
 class ListFragment<T : Parcelable> : Fragment() {
     private var items: ArrayList<T> = ArrayList()

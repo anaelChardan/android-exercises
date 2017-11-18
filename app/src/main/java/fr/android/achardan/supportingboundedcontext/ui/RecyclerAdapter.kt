@@ -1,9 +1,10 @@
-package fr.android.achardan.generic
+package fr.android.achardan.supportingboundedcontext.ui
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import fr.android.achardan.supportingboundedcontext.ui.handler.ItemListener
 
 /**
  * Generic RecyclerAdapter

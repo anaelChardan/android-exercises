@@ -1,13 +1,14 @@
-package fr.android.achardan.book.infrastructure.ui
+package fr.android.achardan.book.infrastructure.controller
 
 import fr.android.achardan.R
 import fr.android.achardan.book.domain.model.Book
 import fr.android.achardan.book.infrastructure.persistence.api.RetrofitItemProcessor
-import fr.android.achardan.generic.activity.AbstractListActivity
-import fr.android.achardan.generic.fragment.DetailFragment
-import fr.android.achardan.generic.activity.ListActivity
-import fr.android.achardan.generic.fragment.ListFragment
-import fr.android.achardan.generic.processor.ItemProcessor
+import fr.android.achardan.book.infrastructure.ui.BookDetailFragment
+import fr.android.achardan.supportingboundedcontext.controller.AbstractListActivity
+import fr.android.achardan.supportingboundedcontext.ui.DetailFragment
+import fr.android.achardan.supportingboundedcontext.controller.ListActivity
+import fr.android.achardan.supportingboundedcontext.ui.ListFragment
+import fr.android.achardan.supportingboundedcontext.persistence.ItemProcessor
 
 class LibraryActivity: ListActivity<Book>, AbstractListActivity<Book>()  {
     override fun contentViewLayoutId(): Int = R.layout.activity_library

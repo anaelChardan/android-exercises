@@ -1,4 +1,4 @@
-package fr.android.achardan.generic
+package fr.android.achardan.supportingboundedcontext.ui
 
 import android.view.View
 

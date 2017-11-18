@@ -1,4 +1,4 @@
-package fr.android.achardan.generic.activity
+package fr.android.achardan.supportingboundedcontext.controller
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.os.Parcelable
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import fr.android.achardan.book.infrastructure.persistence.api.RetrofitItemProcessor
-import fr.android.achardan.generic.fragment.DetailFragment
-import fr.android.achardan.generic.fragment.ListFragment
-import fr.android.achardan.generic.processor.ItemProcessor
+import fr.android.achardan.supportingboundedcontext.ui.DetailFragment
+import fr.android.achardan.supportingboundedcontext.ui.ListFragment
+import fr.android.achardan.supportingboundedcontext.persistence.ItemProcessor
 
 abstract class AbstractListActivity<T : Parcelable> : AppCompatActivity(), ListActivity<T> {
     protected var selectedItem: T? = null
